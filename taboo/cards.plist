@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Word</key>
+		<string>CAT</string>
+		<key>Adjective 1</key>
+		<string>Black</string>
+		<key>Adjective 2</key>
+		<string>Small</string>
+		<key>Adjective 3</key>
+		<string>Fuzzy</string>
+	</dict>
+	<dict>
+		<key>Word</key>
+		<string>DOG</string>
+		<key>Adjective 1</key>
+		<string>HOT</string>
+		<key>Adjective 2</key>
+		<string>Small</string>
+		<key>Adjective 3</key>
+		<string>Fuzzy</string>
+	</dict>
+	<dict>
+		<key>Word</key>
+		<string>HAT</string>
+		<key>Adjective 1</key>
+		<string>Black</string>
+		<key>Adjective 2</key>
+		<string>Small</string>
+		<key>Adjective 3</key>
+		<string>Fuzzy</string>
+	</dict>
+	<dict>
+		<key>Word</key>
+		<string>NORTH WING</string>
+		<key>Adjective 1</key>
+		<string>WHITE HOUSE</string>
+		<key>Adjective 2</key>
+		<string>FLY</string>
+		<key>Adjective 3</key>
+		<string>SOUTH</string>
+		<key>Adjective 4</key>
+		<string>EAST</string>
+		<key>Adjective 5</key>
+		<string>WEST</string>
+	</dict>
+	<dict>
+		<key>Word</key>
+		<string>CONVERSATION</string>
+		<key>Adjective 1</key>
+		<string>TALK</string>
+		<key>Adjective 2</key>
+		<string>COMMUNCATION</string>
+		<key>Adjective 3</key>
+		<string>PHONE</string>
+	</dict>
+</array>
+</plist>
