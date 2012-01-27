@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BB2CBC014D25633007989DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2CBBF14D25633007989DD /* UIKit.framework */; };
+		7BB2CBC214D25633007989DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2CBC114D25633007989DD /* Foundation.framework */; };
+		7BB2CBC414D25633007989DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2CBC314D25633007989DD /* CoreGraphics.framework */; };
+		7BB2CBCA14D25633007989DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2CBC814D25633007989DD /* InfoPlist.strings */; };
+		7BB2CBCC14D25633007989DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB2CBCB14D25633007989DD /* main.m */; };
+		7BB2CBD014D25633007989DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB2CBCF14D25633007989DD /* AppDelegate.m */; };
+		7BB2CBD314D25633007989DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB2CBD214D25633007989DD /* ViewController.m */; };
+		7BB2CBD614D25633007989DD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2CBD414D25633007989DD /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7BB2CBBB14D25633007989DD /* taboo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taboo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB2CBBF14D25633007989DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7BB2CBC114D25633007989DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7BB2CBC314D25633007989DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7BB2CBC714D25633007989DD /* taboo-Info.plist */ = {isa = PBXFileReference; path = "taboo-Info.plist"; sourceTree = "<group>"; };
+		7BB2CBC914D25633007989DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7BB2CBCB14D25633007989DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7BB2CBCD14D25633007989DD /* taboo-Prefix.pch */ = {isa = PBXFileReference; path = "taboo-Prefix.pch"; sourceTree = "<group>"; };
+		7BB2CBCE14D25633007989DD /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		7BB2CBCF14D25633007989DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7BB2CBD114D25633007989DD /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		7BB2CBD214D25633007989DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7BB2CBD514D25633007989DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BB2CBB814D25633007989DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB2CBC014D25633007989DD /* UIKit.framework in Frameworks */,
+				7BB2CBC214D25633007989DD /* Foundation.framework in Frameworks */,
+				7BB2CBC414D25633007989DD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BB2CBB014D25633007989DD = {
+			isa = PBXGroup;
+			children = (
+				7BB2CBC514D25633007989DD /* taboo */,
+				7BB2CBBE14D25633007989DD /* Frameworks */,
+				7BB2CBBC14D25633007989DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BB2CBBC14D25633007989DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BB2CBBB14D25633007989DD /* taboo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BB2CBBE14D25633007989DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BB2CBBF14D25633007989DD /* UIKit.framework */,
+				7BB2CBC114D25633007989DD /* Foundation.framework */,
+				7BB2CBC314D25633007989DD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BB2CBC514D25633007989DD /* taboo */ = {
+			isa = PBXGroup;
+			children = (
+				7BB2CBCE14D25633007989DD /* AppDelegate.h */,
+				7BB2CBCF14D25633007989DD /* AppDelegate.m */,
+				7BB2CBD114D25633007989DD /* ViewController.h */,
+				7BB2CBD214D25633007989DD /* ViewController.m */,
+				7BB2CBD414D25633007989DD /* ViewController.xib */,
+				7BB2CBC614D25633007989DD /* Supporting Files */,
+			);
+			path = taboo;
+			sourceTree = "<group>";
+		};
+		7BB2CBC614D25633007989DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BB2CBC714D25633007989DD /* taboo-Info.plist */,
+				7BB2CBC814D25633007989DD /* InfoPlist.strings */,
+				7BB2CBCB14D25633007989DD /* main.m */,
+				7BB2CBCD14D25633007989DD /* taboo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BB2CBBA14D25633007989DD /* taboo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BB2CBD914D25633007989DD /* Build configuration list for PBXNativeTarget "taboo" */;
+			buildPhases = (
+				7BB2CBB714D25633007989DD /* Sources */,
+				7BB2CBB814D25633007989DD /* Frameworks */,
+				7BB2CBB914D25633007989DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = taboo;
+			productName = taboo;
+			productReference = 7BB2CBBB14D25633007989DD /* taboo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BB2CBB214D25633007989DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Bixby Apps";
+			};
+			buildConfigurationList = 7BB2CBB514D25633007989DD /* Build configuration list for PBXProject "taboo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BB2CBB014D25633007989DD;
+			productRefGroup = 7BB2CBBC14D25633007989DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BB2CBBA14D25633007989DD /* taboo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BB2CBB914D25633007989DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB2CBCA14D25633007989DD /* InfoPlist.strings in Resources */,
+				7BB2CBD614D25633007989DD /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BB2CBB714D25633007989DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB2CBCC14D25633007989DD /* main.m in Sources */,
+				7BB2CBD014D25633007989DD /* AppDelegate.m in Sources */,
+				7BB2CBD314D25633007989DD /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BB2CBC814D25633007989DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BB2CBC914D25633007989DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7BB2CBD414D25633007989DD /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BB2CBD514D25633007989DD /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BB2CBD714D25633007989DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7BB2CBD814D25633007989DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BB2CBDA14D25633007989DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "taboo/taboo-Prefix.pch";
+				INFOPLIST_FILE = "taboo/taboo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7BB2CBDB14D25633007989DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "taboo/taboo-Prefix.pch";
+				INFOPLIST_FILE = "taboo/taboo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BB2CBB514D25633007989DD /* Build configuration list for PBXProject "taboo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB2CBD714D25633007989DD /* Debug */,
+				7BB2CBD814D25633007989DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BB2CBD914D25633007989DD /* Build configuration list for PBXNativeTarget "taboo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB2CBDA14D25633007989DD /* Debug */,
+				7BB2CBDB14D25633007989DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BB2CBB214D25633007989DD /* Project object */;
+}
