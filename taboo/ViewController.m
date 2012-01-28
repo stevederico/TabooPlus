@@ -5,7 +5,7 @@
 //  Created by Stephen Derico on 1/26/12.
 //  Copyright (c) 2012 Bixby Apps. All rights reserved.
 //
-
+#import "SDDataManager.h"
 #import "ViewController.h"
 
 @implementation ViewController
@@ -19,9 +19,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
 
     self.title = @"Taboo";
-    NSString *file = [[NSBundle mainBundle] pathForResource:@"cards" ofType:@"plist"];
-    self.contentArray = [NSArray arrayWithContentsOfFile:file];
-                          NSLog(@"%@",[self.contentArray  description]);
+    
+    
+    
+    SDDataManager  *pdm = [[SDDataManager alloc] init];
+    [pdm createRecordsWithPlistNamed:@"cards"];
     
     
 }
