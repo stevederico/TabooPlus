@@ -22,6 +22,7 @@
     SDDataManager *pdm = [[SDDataManager alloc] init];
     [pdm createRecordsWithParseClass:@"Word"];
     [pdm resetUsed];
+
     
     
 }
@@ -29,8 +30,10 @@
 - (void) viewDidLoad{
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"sqr.png"]]];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"End Game" style:UIBarButtonItemStyleBordered target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
+
 
 
 }
@@ -39,6 +42,8 @@
     [super viewDidUnload];
     self.contentArray = nil;
 }
+
+
 
 
 - (IBAction)startedTapped:(id)sender {
@@ -54,5 +59,10 @@
     cvc.currentTeam = [NSNumber numberWithInt:1];
     [self.navigationController pushViewController:cvc animated:YES];
     
+}
+
+- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item{
+    NSLog(@"POP");
+
 }
 @end

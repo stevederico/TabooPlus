@@ -36,6 +36,9 @@
 		7BB2CBE014D256F9007989DD /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2CBDE14D256F9007989DD /* CardViewController.xib */; };
 		7BB2CBE214D257EB007989DD /* cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2CBE114D257EB007989DD /* cards.plist */; };
 		7BB2CBE414D2AA3B007989DD /* Log in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2CBE314D2AA3B007989DD /* Log */; };
+		7BB46BF114D8ACD7000D6635 /* sqr.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB46BF014D8ACD7000D6635 /* sqr.png */; };
+		7BB46BF414D8AF04000D6635 /* Block_Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB46BF314D8AF04000D6635 /* Block_Icon@2x.png */; };
+		7BB46BF614D8AF08000D6635 /* Block_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BB46BF514D8AF08000D6635 /* Block_Icon.png */; };
 		7BD91A6D14D782E700961BE8 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD91A6C14D782E700961BE8 /* green.png */; };
 		7BD91A7014D7BCD300961BE8 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD91A6F14D7BCD300961BE8 /* Word.m */; };
 /* End PBXBuildFile section */
@@ -84,6 +87,9 @@
 		7BB2CBDE14D256F9007989DD /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		7BB2CBE114D257EB007989DD /* cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cards.plist; sourceTree = "<group>"; };
 		7BB2CBE314D2AA3B007989DD /* Log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Log; path = taboo/Log; sourceTree = "<group>"; };
+		7BB46BF014D8ACD7000D6635 /* sqr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sqr.png; sourceTree = "<group>"; };
+		7BB46BF314D8AF04000D6635 /* Block_Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Block_Icon@2x.png"; sourceTree = "<group>"; };
+		7BB46BF514D8AF08000D6635 /* Block_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Block_Icon.png; sourceTree = "<group>"; };
 		7BD91A6C14D782E700961BE8 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		7BD91A6E14D7BCD300961BE8 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
 		7BD91A6F14D7BCD300961BE8 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
@@ -167,6 +173,8 @@
 		7BB2CBB014D25633007989DD = {
 			isa = PBXGroup;
 			children = (
+				7BB46BF514D8AF08000D6635 /* Block_Icon.png */,
+				7BB46BF314D8AF04000D6635 /* Block_Icon@2x.png */,
 				7BB2CBE314D2AA3B007989DD /* Log */,
 				7BB2CBC514D25633007989DD /* WhatWord */,
 				7BB2CBBE14D25633007989DD /* Frameworks */,
@@ -219,6 +227,7 @@
 		7BB2CBC614D25633007989DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7BB46BF014D8ACD7000D6635 /* sqr.png */,
 				7BD91A6C14D782E700961BE8 /* green.png */,
 				7BB2CBE114D257EB007989DD /* cards.plist */,
 				7BB2CBC714D25633007989DD /* WhatWord-Info.plist */,
@@ -287,6 +296,9 @@
 				7BB2CBE414D2AA3B007989DD /* Log in Resources */,
 				7B0845CB14D36D6D0039C8F9 /* Readme.markdown in Resources */,
 				7BD91A6D14D782E700961BE8 /* green.png in Resources */,
+				7BB46BF114D8ACD7000D6635 /* sqr.png in Resources */,
+				7BB46BF414D8AF04000D6635 /* Block_Icon@2x.png in Resources */,
+				7BB46BF614D8AF08000D6635 /* Block_Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CardViewController.h"
-
-@interface ViewController : UIViewController
+ 
+@interface ViewController : UIViewController <UINavigationBarDelegate>
 
 @property (nonatomic, strong) NSArray *contentArray;
 
 - (IBAction)startedTapped:(id)sender;
-
+- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item;
 @end

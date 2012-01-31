@@ -50,6 +50,7 @@
     [self setAdj4:nil];
     [self setAdj5:nil];
     [self setProgressBar:nil];
+    [self setTimer:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -203,5 +204,15 @@
 
 
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+
+    [self.timer invalidate];
+    
+    
+}
+
+
 
 @end
