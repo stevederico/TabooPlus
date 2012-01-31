@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BB2CBBA14D25633007989DD"
-               BuildableName = "taboo.app"
+               BuildableName = "WhatWord.app"
                BlueprintName = "WhatWord"
                ReferencedContainer = "container:WhatWord.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BB2CBBA14D25633007989DD"
-            BuildableName = "taboo.app"
+            BuildableName = "WhatWord.app"
             BlueprintName = "WhatWord"
             ReferencedContainer = "container:WhatWord.xcodeproj">
          </BuildableReference>
@@ -50,7 +50,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BB2CBBA14D25633007989DD"
-            BuildableName = "taboo.app"
+            BuildableName = "WhatWord.app"
             BlueprintName = "WhatWord"
             ReferencedContainer = "container:WhatWord.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BB2CBBA14D25633007989DD"
-            BuildableName = "taboo.app"
+            BuildableName = "WhatWord.app"
             BlueprintName = "WhatWord"
             ReferencedContainer = "container:WhatWord.xcodeproj">
          </BuildableReference>
