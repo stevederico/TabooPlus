@@ -26,6 +26,15 @@
     
 }
 
+- (void) viewDidLoad{
+    [super viewDidLoad];
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"End Game" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+
+
+}
+
 - (void)viewDidUnload {
     [super viewDidUnload];
     self.contentArray = nil;
