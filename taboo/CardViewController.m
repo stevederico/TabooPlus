@@ -17,9 +17,11 @@
 @synthesize wordLabel;
 @synthesize adj4;
 @synthesize adj5;
+@synthesize progressBar;
 @synthesize words;
 @synthesize currentIndex;
 @synthesize timer,score;
+@synthesize counter;
 
 
 
@@ -27,10 +29,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+   
     [self randomWord];
-    
-//    self.timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(roundOver) userInfo:nil repeats:NO];
+     self.counter = 0;
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
     
     UIBarButtonItem *skipButton = [[UIBarButtonItem alloc] initWithTitle:@"Skip" style:UIBarButtonItemStylePlain target:self action:@selector(skip)];
     self.navigationItem.rightBarButtonItem = skipButton;
@@ -47,6 +49,7 @@
     [self setWordLabel:nil];
     [self setAdj4:nil];
     [self setAdj5:nil];
+    [self setProgressBar:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -177,7 +180,8 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
 
     if (buttonIndex >0) {
-            self.timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(roundOver) userInfo:nil repeats:NO];
+        self.counter = 0;
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
         [self randomWord];
     }else{
         self.timer = nil;
@@ -185,6 +189,19 @@
     
     }
  
+}
+
+- (void)timerCallback{
+    counter++;
+    NSLog(@"%f",self.counter);
+    float p = (float)self.counter/30;
+    self.progressBar.progress = p;
+    if (counter == 30) {
+        [self roundOver];
+        [self.timer invalidate];
+    }
+
+
 }
 
 @end
