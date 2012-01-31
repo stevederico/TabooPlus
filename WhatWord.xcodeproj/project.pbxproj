@@ -382,6 +382,7 @@
 		7BB2CBDA14D25633007989DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Stephen Derico (RGS2F76K98)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -390,6 +391,7 @@
 				GCC_PREFIX_HEADER = "taboo/WhatWord-Prefix.pch";
 				INFOPLIST_FILE = "taboo/WhatWord-Info.plist";
 				PRODUCT_NAME = WhatWord;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1EF25480-55A2-4A21-AD87-93D10433A5B2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -397,6 +399,7 @@
 		7BB2CBDB14D25633007989DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Stephen Derico";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -405,6 +408,7 @@
 				GCC_PREFIX_HEADER = "taboo/WhatWord-Prefix.pch";
 				INFOPLIST_FILE = "taboo/WhatWord-Info.plist";
 				PRODUCT_NAME = WhatWord;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AA06A27E-4983-4625-873F-B02E41063528";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
