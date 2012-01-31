@@ -13,7 +13,7 @@
     self = [super init];
     SSManagedObjectContextObserver *observer = [[SSManagedObjectContextObserver alloc] init];
     observer.observationBlock = ^(NSSet *insertedObjects, NSSet *updatedObjects) {
-        NSLog(@"Inserted %i Words. Updated %i Words.", insertedObjects.count, updatedObjects.count);
+        NSLog(@"Inserted %i items. Updated %i items.", insertedObjects.count, updatedObjects.count);
     };
     [[SSManagedObject mainContext] addObjectObserver:observer];
 
@@ -22,23 +22,123 @@
 
 -(void) createRecordsWithPlistNamed:(NSString*)filename{
     
-    NSString *file = [[NSBundle mainBundle] pathForResource:filename ofType:@"plist"];
-    NSArray *contentArray = [NSArray arrayWithContentsOfFile:file];
-    NSLog(@"%@",[contentArray  description]);
+//    NSString *file = [[NSBundle mainBundle] pathForResource:filename ofType:@"plist"];
+//    NSArray *contentArray = [NSArray arrayWithContentsOfFile:file];
+//    NSLog(@"%@",[contentArray  description]);
+//    
+//    for (NSDictionary *item in contentArray) {
+//        
+//        Word *word = [[Word alloc] initWithEntity: [Word entityWithContext:[SSManagedObject mainContext]] insertIntoManagedObjectContext:[SSManagedObject mainContext]];
+//        
+//        word.name = [item objectForKey:@"Word"];
+//        word.adj1 = [item objectForKey:@"Adjective 1"];
+//        word.adj2 = [item objectForKey:@"Adjective 2"];
+//        word.adj3 = [item objectForKey:@"Adjective 3"];
+//        
+//           NSLog(@"Added %@",[word description]);
+//    }
+//    
+//
+//    [[SSManagedObject mainContext] save:nil];
+
+}
+
+
+-(void) createRecordsWithParseClass:(NSString*)className{
     
-    for (NSDictionary *item in contentArray) {
-        
-        Word *word = [[Word alloc] initWithEntity: [Word entityWithContext:[SSManagedObject mainContext]] insertIntoManagedObjectContext:[SSManagedObject mainContext]];
-        
-        word.name = [item valueForKey:@"Word"];
-        word.adj1 = [item valueForKey:@"Adjective 1"];
-        word.adj1 = [item valueForKey:@"Adjective 2"];
-        word.adj1 = [item valueForKey:@"Adjective 3"];
+    PFQuery *query = [PFQuery queryWithClassName:className];
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"Parse retrieved %d scores.", objects.count);
+            NSManagedObjectContext *context = [SSManagedObject mainContext];
+            
+            for (PFObject *item in objects) {
+                
+                if ([self isDBEmpty]) {
+                    //Write Straight to Empty DB
+                    Word *word = [[Word alloc] initWithEntity: [Word entityWithContext:context] insertIntoManagedObjectContext:context];
+                    word.name = [item objectForKey:@"Name"];
+                    word.used = [NSNumber numberWithBool:NO];
+                    word.adjectives = [item objectForKey:@"Adjectives"];
+                    
+                }else{
+                    //Check
+                    if ([self shouldCreateNew:item]) {
+                        //write
+                        Word *word = [[Word alloc] initWithEntity: [Word entityWithContext:context] insertIntoManagedObjectContext:context];
+                        
+                        word.used = [NSNumber numberWithBool:NO];
+                        word.name = [item objectForKey:@"Name"];
+                        word.adjectives = [item objectForKey:@"Adjectives"];
+                    };
+                
+                }
+                                
+            }
+
+            [context save:nil];
+            
+        } else {
+            //Parse Search Failed
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
+    
+}
+
+- (BOOL)shouldCreateNew:(PFObject*)object{
+    
+    NSLog(@"Checking for %@",[object objectForKey:@"Name"]);
+
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"Word"];
+    NSString *name = [object objectForKey:@"Name"];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"name == %@",name];
+    [fetch setPredicate:pred];
+    [fetch setReturnsDistinctResults:YES];
+//    [fetch setFetchLimit:1];
+    
+    NSArray *array = [[SSManagedObject mainContext] executeFetchRequest:fetch error:nil];
+    if ([array count]>0) {
+          NSLog(@"Already There");
+        return NO;
+    }else{
+        NSLog(@"Writing");
+        return YES;
         
     }
     
+}
 
-    [[SSManagedObject mainContext] save:nil];
+-(BOOL)isDBEmpty{
+   
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"Word"];
+    NSArray *array = [[SSManagedObject mainContext] executeFetchRequest:fetch error:nil];
+    if ([array count]==0) {
+        return YES;
+    }else{
+        NSLog(@"TOTAL ITEMS %d",[array count]);
+        return NO;
+    }
+
 
 }
+
+-(void)resetUsed{
+    
+    NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"Word"];
+    NSArray *array = [[SSManagedObject mainContext] executeFetchRequest:fetch error:nil];
+    if ([array count]==0) {
+        //DB IS BLANK!
+    }else{
+        for (Word *item in array) {
+            item.used = [NSNumber numberWithBool:NO];
+        }
+        [[SSManagedObject mainContext] save:nil];
+    }
+    
+    
+}
+
 @end

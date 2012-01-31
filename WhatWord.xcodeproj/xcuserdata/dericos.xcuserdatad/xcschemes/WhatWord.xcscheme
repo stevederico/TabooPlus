@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BB2CBBA14D25633007989DD"
                BuildableName = "taboo.app"
-               BlueprintName = "taboo"
-               ReferencedContainer = "container:taboo.xcodeproj">
+               BlueprintName = "WhatWord"
+               ReferencedContainer = "container:WhatWord.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,8 +33,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BB2CBBA14D25633007989DD"
             BuildableName = "taboo.app"
-            BlueprintName = "taboo"
-            ReferencedContainer = "container:taboo.xcodeproj">
+            BlueprintName = "WhatWord"
+            ReferencedContainer = "container:WhatWord.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,8 +51,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BB2CBBA14D25633007989DD"
             BuildableName = "taboo.app"
-            BlueprintName = "taboo"
-            ReferencedContainer = "container:taboo.xcodeproj">
+            BlueprintName = "WhatWord"
+            ReferencedContainer = "container:WhatWord.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,8 +69,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7BB2CBBA14D25633007989DD"
             BuildableName = "taboo.app"
-            BlueprintName = "taboo"
-            ReferencedContainer = "container:taboo.xcodeproj">
+            BlueprintName = "WhatWord"
+            ReferencedContainer = "container:WhatWord.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

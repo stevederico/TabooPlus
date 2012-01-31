@@ -10,4 +10,8 @@
 
 @interface SDDataManager : NSObject
 -(void) createRecordsWithPlistNamed:(NSString*)filename;
+-(void) createRecordsWithParseClass:(NSString*)className;
+-(BOOL)shouldCreateNew:(PFObject*)object;
+-(BOOL)isDBEmpty;
+-(void)resetUsed;
 @end

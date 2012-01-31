@@ -9,6 +9,7 @@
 #endif
 
 #ifdef __OBJC__
+#import <Parse/Parse.h>
 #import "SSDataKit.h"
 #import <CoreData/CoreData.h>
     #import <UIKit/UIKit.h>

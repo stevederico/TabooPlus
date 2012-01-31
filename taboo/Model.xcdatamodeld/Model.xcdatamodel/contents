@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Word" representedClassName="Word" syncable="YES">
-        <attribute name="adj1" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="adj2" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="adj3" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="adj4" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="adj5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="adjectives" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="used" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Word" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Word" positionX="160" positionY="192" width="128" height="120"/>
     </elements>
 </model>

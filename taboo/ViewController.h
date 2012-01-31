@@ -9,10 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CardViewController.h"
 
-@interface ViewController : UIViewController {
-    
-
-}
+@interface ViewController : UIViewController
 
 @property (nonatomic, strong) NSArray *contentArray;
 
