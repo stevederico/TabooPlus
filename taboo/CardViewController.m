@@ -173,7 +173,7 @@
     
     score = 0;
     
-    self.word = [self.words objectAtIndex:currentIndex++];
+    [self randomWord];
 
 }
 
@@ -184,7 +184,7 @@
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
         [self randomWord];
     }else{
-        self.timer = nil;
+        [self.timer invalidate];
         [self.navigationController popViewControllerAnimated:YES];
     
     }
