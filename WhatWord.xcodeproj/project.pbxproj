@@ -15,7 +15,6 @@
 		7B0845CF14D36D6D0039C8F9 /* SSManagedObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0845C914D36D6D0039C8F9 /* SSManagedObjectController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7B0845D114D36F070039C8F9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0845D014D36F070039C8F9 /* CoreData.framework */; };
 		7B0845D414D36F7C0039C8F9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B0845D214D36F7C0039C8F9 /* Model.xcdatamodeld */; };
-		7B0845D714D36FF30039C8F9 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0845D614D36FF30039C8F9 /* Word.m */; };
 		7B0845DD14D370570039C8F9 /* SDDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0845DC14D370570039C8F9 /* SDDataManager.m */; };
 		7B61FDEB14D37F7300FBF43D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B61FDEA14D37F7300FBF43D /* Parse.framework */; };
 		7B61FDEE14D37F8600FBF43D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B61FDED14D37F8600FBF43D /* AudioToolbox.framework */; };
@@ -37,6 +36,8 @@
 		7BB2CBE014D256F9007989DD /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2CBDE14D256F9007989DD /* CardViewController.xib */; };
 		7BB2CBE214D257EB007989DD /* cards.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2CBE114D257EB007989DD /* cards.plist */; };
 		7BB2CBE414D2AA3B007989DD /* Log in Resources */ = {isa = PBXBuildFile; fileRef = 7BB2CBE314D2AA3B007989DD /* Log */; };
+		7BD91A6D14D782E700961BE8 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BD91A6C14D782E700961BE8 /* green.png */; };
+		7BD91A7014D7BCD300961BE8 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD91A6F14D7BCD300961BE8 /* Word.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,8 +56,6 @@
 		7B0845C914D36D6D0039C8F9 /* SSManagedObjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSManagedObjectController.m; sourceTree = "<group>"; };
 		7B0845D014D36F070039C8F9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7B0845D314D36F7C0039C8F9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		7B0845D514D36FF30039C8F9 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
-		7B0845D614D36FF30039C8F9 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		7B0845DB14D370570039C8F9 /* SDDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDataManager.h; sourceTree = "<group>"; };
 		7B0845DC14D370570039C8F9 /* SDDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDataManager.m; sourceTree = "<group>"; };
 		7B61FDEA14D37F7300FBF43D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -67,14 +66,14 @@
 		7B61FDF514D37FB400FBF43D /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		7B61FDF714D37FBB00FBF43D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7B61FDF914D37FC100FBF43D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7BB2CBBB14D25633007989DD /* taboo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taboo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB2CBBB14D25633007989DD /* WhatWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB2CBBF14D25633007989DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7BB2CBC114D25633007989DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BB2CBC314D25633007989DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7BB2CBC714D25633007989DD /* taboo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "taboo-Info.plist"; sourceTree = "<group>"; };
+		7BB2CBC714D25633007989DD /* WhatWord-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhatWord-Info.plist"; sourceTree = "<group>"; };
 		7BB2CBC914D25633007989DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7BB2CBCB14D25633007989DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7BB2CBCD14D25633007989DD /* taboo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "taboo-Prefix.pch"; sourceTree = "<group>"; };
+		7BB2CBCD14D25633007989DD /* WhatWord-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhatWord-Prefix.pch"; sourceTree = "<group>"; };
 		7BB2CBCE14D25633007989DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7BB2CBCF14D25633007989DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7BB2CBD114D25633007989DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -84,7 +83,10 @@
 		7BB2CBDD14D256F9007989DD /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		7BB2CBDE14D256F9007989DD /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		7BB2CBE114D257EB007989DD /* cards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cards.plist; sourceTree = "<group>"; };
-		7BB2CBE314D2AA3B007989DD /* Log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Log; sourceTree = "<group>"; };
+		7BB2CBE314D2AA3B007989DD /* Log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Log; path = taboo/Log; sourceTree = "<group>"; };
+		7BD91A6C14D782E700961BE8 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		7BD91A6E14D7BCD300961BE8 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		7BD91A6F14D7BCD300961BE8 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +135,10 @@
 		7B0845D814D36FF60039C8F9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7BB2CBDC14D256F9007989DD /* CardViewController.h */,
-				7BB2CBDD14D256F9007989DD /* CardViewController.m */,
 				7BB2CBD114D25633007989DD /* ViewController.h */,
 				7BB2CBD214D25633007989DD /* ViewController.m */,
+				7BB2CBDC14D256F9007989DD /* CardViewController.h */,
+				7BB2CBDD14D256F9007989DD /* CardViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -144,9 +146,9 @@
 		7B0845D914D36FF90039C8F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7B0845D514D36FF30039C8F9 /* Word.h */,
-				7B0845D614D36FF30039C8F9 /* Word.m */,
 				7B0845D214D36F7C0039C8F9 /* Model.xcdatamodeld */,
+				7BD91A6E14D7BCD300961BE8 /* Word.h */,
+				7BD91A6F14D7BCD300961BE8 /* Word.m */,
 				7B0845DB14D370570039C8F9 /* SDDataManager.h */,
 				7B0845DC14D370570039C8F9 /* SDDataManager.m */,
 			);
@@ -165,7 +167,8 @@
 		7BB2CBB014D25633007989DD = {
 			isa = PBXGroup;
 			children = (
-				7BB2CBC514D25633007989DD /* taboo */,
+				7BB2CBE314D2AA3B007989DD /* Log */,
+				7BB2CBC514D25633007989DD /* WhatWord */,
 				7BB2CBBE14D25633007989DD /* Frameworks */,
 				7BB2CBBC14D25633007989DD /* Products */,
 			);
@@ -174,7 +177,7 @@
 		7BB2CBBC14D25633007989DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7BB2CBBB14D25633007989DD /* taboo.app */,
+				7BB2CBBB14D25633007989DD /* WhatWord.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,7 +202,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7BB2CBC514D25633007989DD /* taboo */ = {
+		7BB2CBC514D25633007989DD /* WhatWord */ = {
 			isa = PBXGroup;
 			children = (
 				7BB2CBCE14D25633007989DD /* AppDelegate.h */,
@@ -209,18 +212,19 @@
 				7B0845D814D36FF60039C8F9 /* Controller */,
 				7BB2CBC614D25633007989DD /* Supporting Files */,
 			);
+			name = WhatWord;
 			path = taboo;
 			sourceTree = "<group>";
 		};
 		7BB2CBC614D25633007989DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7BD91A6C14D782E700961BE8 /* green.png */,
 				7BB2CBE114D257EB007989DD /* cards.plist */,
-				7BB2CBE314D2AA3B007989DD /* Log */,
-				7BB2CBC714D25633007989DD /* taboo-Info.plist */,
+				7BB2CBC714D25633007989DD /* WhatWord-Info.plist */,
 				7BB2CBC814D25633007989DD /* InfoPlist.strings */,
 				7BB2CBCB14D25633007989DD /* main.m */,
-				7BB2CBCD14D25633007989DD /* taboo-Prefix.pch */,
+				7BB2CBCD14D25633007989DD /* WhatWord-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -228,9 +232,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7BB2CBBA14D25633007989DD /* taboo */ = {
+		7BB2CBBA14D25633007989DD /* WhatWord */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7BB2CBD914D25633007989DD /* Build configuration list for PBXNativeTarget "taboo" */;
+			buildConfigurationList = 7BB2CBD914D25633007989DD /* Build configuration list for PBXNativeTarget "WhatWord" */;
 			buildPhases = (
 				7BB2CBB714D25633007989DD /* Sources */,
 				7BB2CBB814D25633007989DD /* Frameworks */,
@@ -240,9 +244,9 @@
 			);
 			dependencies = (
 			);
-			name = taboo;
+			name = WhatWord;
 			productName = taboo;
-			productReference = 7BB2CBBB14D25633007989DD /* taboo.app */;
+			productReference = 7BB2CBBB14D25633007989DD /* WhatWord.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -254,7 +258,7 @@
 				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Bixby Apps";
 			};
-			buildConfigurationList = 7BB2CBB514D25633007989DD /* Build configuration list for PBXProject "taboo" */;
+			buildConfigurationList = 7BB2CBB514D25633007989DD /* Build configuration list for PBXProject "WhatWord" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -266,7 +270,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7BB2CBBA14D25633007989DD /* taboo */,
+				7BB2CBBA14D25633007989DD /* WhatWord */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +286,7 @@
 				7BB2CBE214D257EB007989DD /* cards.plist in Resources */,
 				7BB2CBE414D2AA3B007989DD /* Log in Resources */,
 				7B0845CB14D36D6D0039C8F9 /* Readme.markdown in Resources */,
+				7BD91A6D14D782E700961BE8 /* green.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +307,8 @@
 				7B0845CE14D36D6D0039C8F9 /* SSManagedObjectContextObserver.m in Sources */,
 				7B0845CF14D36D6D0039C8F9 /* SSManagedObjectController.m in Sources */,
 				7B0845D414D36F7C0039C8F9 /* Model.xcdatamodeld in Sources */,
-				7B0845D714D36FF30039C8F9 /* Word.m in Sources */,
 				7B0845DD14D370570039C8F9 /* SDDataManager.m in Sources */,
+				7BD91A7014D7BCD300961BE8 /* Word.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,9 +387,9 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "taboo/taboo-Prefix.pch";
-				INFOPLIST_FILE = "taboo/taboo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "taboo/WhatWord-Prefix.pch";
+				INFOPLIST_FILE = "taboo/WhatWord-Info.plist";
+				PRODUCT_NAME = WhatWord;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -397,9 +402,9 @@
 					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "taboo/taboo-Prefix.pch";
-				INFOPLIST_FILE = "taboo/taboo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "taboo/WhatWord-Prefix.pch";
+				INFOPLIST_FILE = "taboo/WhatWord-Info.plist";
+				PRODUCT_NAME = WhatWord;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -407,7 +412,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7BB2CBB514D25633007989DD /* Build configuration list for PBXProject "taboo" */ = {
+		7BB2CBB514D25633007989DD /* Build configuration list for PBXProject "WhatWord" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BB2CBD714D25633007989DD /* Debug */,
@@ -416,7 +421,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BB2CBD914D25633007989DD /* Build configuration list for PBXNativeTarget "taboo" */ = {
+		7BB2CBD914D25633007989DD /* Build configuration list for PBXNativeTarget "WhatWord" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BB2CBDA14D25633007989DD /* Debug */,

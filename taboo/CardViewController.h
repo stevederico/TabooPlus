@@ -5,7 +5,7 @@
 //  Created by Stephen Derico on 1/26/12.
 //  Copyright (c) 2012 Bixby Apps. All rights reserved.
 //
-
+#import "Word.h"
 #import <UIKit/UIKit.h>
 
 @interface CardViewController : UIViewController <UIAlertViewDelegate>
@@ -13,8 +13,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *adj2Label;
 @property (strong, nonatomic) IBOutlet UILabel *adj3Label;
 @property (strong, nonatomic) IBOutlet UILabel *wordLabel;
+@property (strong, nonatomic) IBOutlet UILabel *adj4;
+@property (strong, nonatomic) IBOutlet UILabel *adj5;
 
-@property (nonatomic, strong) NSDictionary *wordDict;
+@property (nonatomic, strong) Word *word;
 @property (nonatomic, strong) NSNumber *currentTeam;
 @property (nonatomic, assign) int currentIndex;
 @property (nonatomic, strong) NSArray *words;
@@ -22,6 +24,8 @@
 @property (nonatomic,assign) int score;
 - (IBAction)nextTapped:(id)sender;
 - (void)loadLabels;
-- (IBAction)skipTapped:(id)sender;
+- (void)skip;
 - (void)roundOver;
+- (void)randomWord;
+
 @end

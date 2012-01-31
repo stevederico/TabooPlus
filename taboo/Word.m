@@ -1,8 +1,8 @@
 //
 //  Word.m
-//  taboo
+//  WhatWord
 //
-//  Created by Stephen Derico on 1/27/12.
+//  Created by Stephen Derico on 1/30/12.
 //  Copyright (c) 2012 Bixby Apps. All rights reserved.
 //
 
@@ -11,11 +11,8 @@
 
 @implementation Word
 
+@dynamic adjectives;
 @dynamic name;
-@dynamic adj1;
-@dynamic adj2;
-@dynamic adj3;
-@dynamic adj4;
-@dynamic adj5;
+@dynamic used;
 
 @end

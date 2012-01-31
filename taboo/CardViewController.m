@@ -12,9 +12,11 @@
 @synthesize adj1Label;
 @synthesize adj2Label;
 @synthesize adj3Label;
-@synthesize wordDict;
+@synthesize word;
 @synthesize currentTeam;
 @synthesize wordLabel;
+@synthesize adj4;
+@synthesize adj5;
 @synthesize words;
 @synthesize currentIndex;
 @synthesize timer,score;
@@ -23,80 +25,111 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    [self loadLabels];
+
+    [self randomWord];
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(roundOver) userInfo:nil repeats:NO];
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(roundOver) userInfo:nil repeats:NO];
+    
+    UIBarButtonItem *skipButton = [[UIBarButtonItem alloc] initWithTitle:@"Skip" style:UIBarButtonItemStylePlain target:self action:@selector(skip)];
+    self.navigationItem.rightBarButtonItem = skipButton;
+    
     
 }
-
-
-- (void)loadLabels{
-
-    self.wordLabel.text = [self.wordDict valueForKey:@"Word"];
-    self.adj1Label.text = [self.wordDict valueForKey:@"Adjective 1"];
-    self.adj2Label.text = [self.wordDict valueForKey:@"Adjective 2"];
-    self.adj3Label.text = [self.wordDict valueForKey:@"Adjective 3"];
-    self.title = [NSString stringWithFormat:@"Team %@",self.currentTeam];
-  
-}
-
-
 
 - (void)viewDidUnload
 {
     [self setAdj3Label:nil];
     [self setAdj2Label:nil];
     [self setAdj1Label:nil];
-    [self setWordDict:nil];
+    [self setWord:nil];
     [self setWordLabel:nil];
+    [self setAdj4:nil];
+    [self setAdj5:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
+- (void)randomWord{
+
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Word" inManagedObjectContext:[SSManagedObject mainContext]]; 
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init]; 
+    [request setEntity:entityDescription]; 
+    [request setFetchLimit:10];
+    
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"used.boolValue == NO"];
+    [request setPredicate:pred];
+    
+    NSArray *objects = [[SSManagedObject mainContext] executeFetchRequest:request error:nil];    
+    if ([objects count]==0) {
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Out of Cards" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        
+        [self.navigationController popViewControllerAnimated:YES];
+        
+        return;
+    }
+    
+    NSUInteger rand = (arc4random() % [objects count]);
+    NSLog(@"%d",rand);
+    if (rand == [objects count]) {
+        rand--;
+    }
+    
+    self.word = [objects objectAtIndex:rand];
+
+
+    [self loadLabels];
+
+}
+
+
+- (void)loadLabels{
+    NSLog(@"%@",[self.word description]);
+    self.wordLabel.text = self.word.name;
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    [array addObject:adj1Label];
+    [array addObject:adj2Label];
+    [array addObject:adj3Label];
+    [array addObject:adj4];
+    [array addObject:adj5];
+    int i = 0;
+    NSArray *adjs = self.word.adjectives;
+    for (UILabel *item in array) {
+        item.text = [adjs objectAtIndex:i];
+        i++;
+    }
+
+    self.title = [NSString stringWithFormat:@"Team %@",self.currentTeam];
+  
+}
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (IBAction)nextTapped:(id)sender {
     
     self.score++;
-    currentIndex++;
- 
-    if (currentIndex == [self.words count]) {
-        currentIndex = 0;
-        self.wordDict = [self.words objectAtIndex:0];
-        [self loadLabels];
-        return;
-    }
-    self.wordDict = [self.words objectAtIndex:currentIndex];
+    self.word.used = [NSNumber numberWithBool:YES];
+    [self randomWord];
     
- 
-    [self loadLabels];
-    
-
+    [[SSManagedObject mainContext] saveWithoutMagic:nil];
 }
 
-- (IBAction)skipTapped:(id)sender {
+- (void)skip {
+    self.word.used = [NSNumber numberWithBool:YES];
     
-    currentIndex++;
+    [[SSManagedObject mainContext] saveWithoutMagic:nil];
     
-    if (currentIndex == [self.words count]) {
-        currentIndex = 0;
-        self.wordDict = [self.words objectAtIndex:0];
-        [self loadLabels];
-        return;
-    }
-    self.wordDict = [self.words objectAtIndex:currentIndex];
-    
-    
-    [self loadLabels];
+    [self randomWord];
+
 }
 
 - (void)roundOver{
@@ -115,12 +148,7 @@
       self.currentTeam = [NSNumber numberWithInt:1];
     
     }
-    if (currentIndex == [self.words count]) {
-        currentIndex = 0;
-        self.wordDict = [self.words objectAtIndex:currentIndex];
-        [self loadLabels];
-        return;
-    }
+
     
     if (currentTeam == [NSNumber numberWithInt:1]) {
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -142,12 +170,7 @@
     
     score = 0;
     
-    self.wordDict = [self.words objectAtIndex:currentIndex++];
-
-    
-    
-
-
+    self.word = [self.words objectAtIndex:currentIndex++];
 
 }
 
@@ -155,15 +178,13 @@
 
     if (buttonIndex >0) {
             self.timer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(roundOver) userInfo:nil repeats:NO];
-           [self loadLabels];
+        [self randomWord];
     }else{
+        self.timer = nil;
         [self.navigationController popViewControllerAnimated:YES];
     
     }
  
-    
-    
-
 }
 
 @end

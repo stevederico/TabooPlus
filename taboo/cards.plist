@@ -11,10 +11,6 @@
 		<string>Small</string>
 		<key>Adjective 3</key>
 		<string>Fuzzy</string>
-		<key>Adjective 4</key>
-		<string>Fuzzy</string>
-		<key>Adjective 5</key>
-		<string>Fuzzy</string>
 	</dict>
 	<dict>
 		<key>Word</key>
@@ -45,10 +41,6 @@
 		<string>FLY</string>
 		<key>Adjective 3</key>
 		<string>SOUTH</string>
-		<key>Adjective 4</key>
-		<string>EAST</string>
-		<key>Adjective 5</key>
-		<string>WEST</string>
 	</dict>
 	<dict>
 		<key>Word</key>

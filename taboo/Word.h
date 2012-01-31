@@ -1,8 +1,8 @@
 //
 //  Word.h
-//  taboo
+//  WhatWord
 //
-//  Created by Stephen Derico on 1/27/12.
+//  Created by Stephen Derico on 1/30/12.
 //  Copyright (c) 2012 Bixby Apps. All rights reserved.
 //
 
@@ -12,11 +12,8 @@
 
 @interface Word : SSManagedObject
 
+@property (nonatomic, retain) id adjectives;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * adj1;
-@property (nonatomic, retain) NSString * adj2;
-@property (nonatomic, retain) NSString * adj3;
-@property (nonatomic, retain) NSString * adj4;
-@property (nonatomic, retain) NSString * adj5;
+@property (nonatomic, retain) NSNumber * used;
 
 @end

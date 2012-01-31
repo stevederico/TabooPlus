@@ -13,26 +13,21 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    self.title = @"Taboo";
+    self.title = @"What Word?";
     
-    
-    
-    SDDataManager  *pdm = [[SDDataManager alloc] init];
-    [pdm createRecordsWithPlistNamed:@"cards"];
+    SDDataManager *pdm = [[SDDataManager alloc] init];
+    [pdm createRecordsWithParseClass:@"Word"];
+    [pdm resetUsed];
     
     
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
     self.contentArray = nil;
 }
 
@@ -44,9 +39,9 @@
     [prefs synchronize];
     
     CardViewController *cvc = [[CardViewController alloc] init];
-    cvc.wordDict = [self.contentArray objectAtIndex:0];
     cvc.words = self.contentArray;
     cvc.currentIndex = 0;
+    cvc.title = @"Team 1";
     cvc.currentTeam = [NSNumber numberWithInt:1];
     [self.navigationController pushViewController:cvc animated:YES];
     

@@ -1,6 +1,12 @@
 connect to cloud
+Fixed Bug
+Added more Cards
+Fixed Timer
 
--Fix click twice bug
--Add more cards
--Pretty it up
--Fix Timer
+1/30
+Added CoreData Sync
+Make cards only display once
+Added Random Card Order
+stop timer after pop.
+
+-Design
