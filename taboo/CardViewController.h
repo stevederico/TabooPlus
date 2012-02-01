@@ -24,6 +24,8 @@
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic,assign) int score;
 @property (nonatomic,assign) float counter;
+
+
 - (IBAction)nextTapped:(id)sender;
 - (void)loadLabels;
 - (void)skip;

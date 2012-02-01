@@ -25,11 +25,24 @@
 
 
 
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
+    self.view.backgroundColor = [UIColor colorWithRed:226.0/255.0 green:229.0/255.0 blue:234.0/255.0 alpha:1.0];
+    self.adj1Label.textColor =  [UIColor colorWithRed:53.0/255.0 green:53.0/255.0 blue:53.0/255.0 alpha:1.0];
+    self.adj2Label.textColor =  [UIColor colorWithRed:53.0/255.0 green:53.0/255.0 blue:53.0/255.0 alpha:1.0];
+    self.adj3Label.textColor =  [UIColor colorWithRed:53.0/255.0 green:53.0/255.0 blue:53.0/255.0 alpha:1.0];
+    self.adj4.textColor =  [UIColor colorWithRed:53.0/255.0 green:53.0/255.0 blue:53.0/255.0 alpha:1.0];
+    self.adj5.textColor =  [UIColor colorWithRed:53.0/255.0 green:53.0/255.0 blue:53.0/255.0 alpha:1.0];
+    self.wordLabel.textColor =  [UIColor colorWithRed:53.0/255.0 green:53.0/255.0 blue:53.0/255.0 alpha:1.0];
+     self.progressBar.progressTintColor = [UIColor colorWithRed:54.0/255.0 green:64.0/255.0 blue:78.0/255.0 alpha:1.0];
+ 
+
+
+    
     [self randomWord];
      self.counter = 0;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
@@ -139,19 +152,10 @@
 - (void)roundOver{
 
     NSLog(@"ROUND OVER");
-    
-    NSString *message = [NSString stringWithFormat:@"Team %@ Score: %d",self.currentTeam,score];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Round Over" message:message delegate:self cancelButtonTitle:@"Game Over" otherButtonTitles:@"Next Team", nil];
-    [alert setDelegate:self];
-    [alert show];
+
     
     
-    if (self.currentTeam ==[NSNumber numberWithInt:1]) {
-        self.currentTeam = [NSNumber numberWithInt:2];
-    }else {
-      self.currentTeam = [NSNumber numberWithInt:1];
     
-    }
 
     
     if (currentTeam == [NSNumber numberWithInt:1]) {
@@ -172,7 +176,27 @@
         [prefs synchronize];
     }
     
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSNumber *team1 = [prefs objectForKey:@"Team1Score"];
+    NSNumber *team2 = [prefs objectForKey:@"Team2Score"];
+    
+    
+    NSString *message = [NSString stringWithFormat:@"Team %@ Got %d",self.currentTeam,score];
+    
+    NSString *current = [NSString stringWithFormat:@"Team 1: %@ Team 2: %@",team1,team2];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message message:current delegate:self cancelButtonTitle:@"Game Over" otherButtonTitles:@"Next Team", nil];
+    [alert setDelegate:self];
+    [alert show];
+    
     score = 0;
+    
+    if (self.currentTeam ==[NSNumber numberWithInt:1]) {
+        self.currentTeam = [NSNumber numberWithInt:2];
+    }else {
+        self.currentTeam = [NSNumber numberWithInt:1];
+        
+    }
     
     [self randomWord];
 
@@ -200,6 +224,11 @@
     if (counter == 30) {
         [self roundOver];
         [self.timer invalidate];
+         self.progressBar.progressTintColor = [UIColor colorWithRed:54.0/255.0 green:64.0/255.0 blue:78.0/255.0 alpha:1.0];
+    }
+    
+    if (counter == 25) {
+        self.progressBar.progressTintColor = [UIColor redColor];
     }
 
 

@@ -19,8 +19,8 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>Block_Icon@2x.png</string>
-				<string>Block_Icon.png</string>
+				<string>WhatWord.png</string>
+				<string>WhatWord@2x.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>

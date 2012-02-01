@@ -29,7 +29,7 @@
 
 - (void) viewDidLoad{
     [super viewDidLoad];
-    
+     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:54.0/255.0 green:64.0/255.0 blue:78.0/255.0 alpha:1.0];
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"sqr.png"]]];
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"End Game" style:UIBarButtonItemStyleBordered target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
