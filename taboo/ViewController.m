@@ -57,8 +57,8 @@
             return;
         }
     }
-    
-    
+
+
     
     [[LocalyticsSession sharedLocalyticsSession] tagEvent:@"New Game"];
     
