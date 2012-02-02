@@ -21,9 +21,11 @@
      [[LocalyticsSession sharedLocalyticsSession] startSession:@"REDACTED_LOCALYTICS_KEY"];
 
     
-    [Crittercism initWithAppID: @"4ee7faf83f5b312ca200004c"
-                        andKey:@"4ee7faf83f5b312ca200004c97wd3bnp"
-                     andSecret:@"munzvvs90ddyq1rplipetkfcxcjx3gok"];
+    [Crittercism initWithAppID: @"REDACTED_CRITTERCISM_ID"
+                        andKey:@"REDACTED_CRITTERCISM_IDpih3u927"
+                     andSecret:@"qkkdns13unaiqihjdgj28esvbhtf9l4o"];
+    
+   
 
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
