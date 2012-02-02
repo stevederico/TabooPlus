@@ -2,7 +2,7 @@
 //  Word.m
 //  WhatWord
 //
-//  Created by Stephen Derico on 1/30/12.
+//  Created by Stephen Derico on 2/1/12.
 //  Copyright (c) 2012 Bixby Apps. All rights reserved.
 //
 
@@ -14,5 +14,6 @@
 @dynamic adjectives;
 @dynamic name;
 @dynamic used;
+@dynamic objectId;
 
 @end

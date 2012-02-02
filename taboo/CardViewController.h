@@ -7,8 +7,17 @@
 //
 #import "Word.h"
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface CardViewController : UIViewController <UIAlertViewDelegate>
+@interface CardViewController : UIViewController <UIAlertViewDelegate> {
+
+    SystemSoundID sound;
+
+}
+
+
+
+
 @property (strong, nonatomic) IBOutlet UILabel *adj1Label;
 @property (strong, nonatomic) IBOutlet UILabel *adj2Label;
 @property (strong, nonatomic) IBOutlet UILabel *adj3Label;

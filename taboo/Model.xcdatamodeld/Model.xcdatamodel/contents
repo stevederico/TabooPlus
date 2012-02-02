@@ -3,9 +3,10 @@
     <entity name="Word" representedClassName="Word" syncable="YES">
         <attribute name="adjectives" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="used" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Word" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Word" positionX="160" positionY="192" width="128" height="105"/>
     </elements>
 </model>
