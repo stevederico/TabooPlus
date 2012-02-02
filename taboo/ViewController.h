@@ -10,17 +10,13 @@
 #import "CardViewController.h"
 #import "SDDataManager.h"
  
-@interface ViewController : UIViewController <UINavigationBarDelegate, SDDataManagerDelegate>{
-
-    BOOL missedDownload;
-
-}
+@interface ViewController : UIViewController <UINavigationBarDelegate>
 
 @property (nonatomic, strong) NSArray *contentArray;
 @property (nonatomic, strong) SDDataManager *dataManager;
 @property (strong, nonatomic) IBOutlet UIButton *gameButton;
 
-- (void)dataReady;
-- (IBAction)startedTapped:(id)sender;
 
+- (IBAction)startedTapped:(id)sender;
+- (BOOL)checkForNetwork;
 @end

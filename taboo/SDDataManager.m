@@ -9,7 +9,7 @@
 #import "SDDataManager.h"
 
 @implementation SDDataManager
-@synthesize delegate = _delegate;
+
 - (id) init{
     self = [super init];
     SSManagedObjectContextObserver *observer = [[SSManagedObjectContextObserver alloc] init];
@@ -79,7 +79,6 @@
             }
 
             [context save:nil];
-            [self.delegate dataReady];
             
         } else {
             //Parse Search Failed

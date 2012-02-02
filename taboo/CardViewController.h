@@ -34,7 +34,7 @@
 @property (nonatomic,assign) int score;
 @property (nonatomic,assign) float counter;
 
-
+-(void)playSound;
 - (IBAction)nextTapped:(id)sender;
 - (void)loadLabels;
 - (void)skip;

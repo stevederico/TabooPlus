@@ -492,6 +492,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "taboo/WhatWord-Prefix.pch";
 				INFOPLIST_FILE = "taboo/WhatWord-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/taboo/CrittercismSDK-crashreporting-only\"",
@@ -513,6 +514,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "taboo/WhatWord-Prefix.pch";
 				INFOPLIST_FILE = "taboo/WhatWord-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/taboo/CrittercismSDK-crashreporting-only\"",
