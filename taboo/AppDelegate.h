@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LocalyticsSession.h"
 @class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

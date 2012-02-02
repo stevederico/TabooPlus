@@ -8,11 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "CardViewController.h"
+#import "SDDataManager.h"
  
-@interface ViewController : UIViewController <UINavigationBarDelegate>
+@interface ViewController : UIViewController <UINavigationBarDelegate, SDDataManagerDelegate>{
+
+    BOOL missedDownload;
+
+}
 
 @property (nonatomic, strong) NSArray *contentArray;
+@property (nonatomic, strong) SDDataManager *dataManager;
+@property (strong, nonatomic) IBOutlet UIButton *gameButton;
 
+- (void)dataReady;
 - (IBAction)startedTapped:(id)sender;
-- (void)navigationBar:(UINavigationBar *)navigationBar didPopItem:(UINavigationItem *)item;
+
 @end
