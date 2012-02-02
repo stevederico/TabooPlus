@@ -38,11 +38,8 @@
     self.adj4.textColor =  [UIColor colorWithRed:53.0/255.0 green:53.0/255.0 blue:53.0/255.0 alpha:1.0];
     self.adj5.textColor =  [UIColor colorWithRed:53.0/255.0 green:53.0/255.0 blue:53.0/255.0 alpha:1.0];
     self.wordLabel.textColor =  [UIColor colorWithRed:53.0/255.0 green:53.0/255.0 blue:53.0/255.0 alpha:1.0];
-     self.progressBar.progressTintColor = [UIColor colorWithRed:54.0/255.0 green:64.0/255.0 blue:78.0/255.0 alpha:1.0];
+    self.progressBar.progressTintColor = [UIColor colorWithRed:54.0/255.0 green:64.0/255.0 blue:78.0/255.0 alpha:1.0];
  
-
-
-    
     [self randomWord];
      self.counter = 0;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
@@ -155,26 +152,23 @@
 
 }
 
-- (void)roundOver{
-    
+
+- (void)playSound{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"TimeUp" ofType:@"mp3"];
     if (path) {
         NSURL *url = [NSURL fileURLWithPath:path];
         OSStatus err = AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
         if (err != kAudioServicesNoError) {
-        NSLog(@"Could not load %@, error code: %ld", url, err);
+            NSLog(@"Could not load %@, error code: %ld", url, err);
         } 
         
         AudioServicesPlaySystemSound(sound);
         
-
-        
-
     }
-    
-    
-    
+}
 
+- (void)roundOver{
+    
     NSLog(@"ROUND OVER");
 
     if (currentTeam == [NSNumber numberWithInt:1]) {
@@ -203,7 +197,6 @@
     
     if (self.currentTeam ==[NSNumber numberWithInt:1]) {
         
-        
         NSString *message = [NSString stringWithFormat:@"Team 1: %@",team1];
         
         NSString *current = [NSString stringWithFormat:@"Team 2: %@",team2];
@@ -212,11 +205,7 @@
         [alert setDelegate:self];
         [alert show];
         
-        
-        
         self.currentTeam = [NSNumber numberWithInt:2];
-    
-        
         
     }else {
         self.currentTeam = [NSNumber numberWithInt:1];
@@ -237,7 +226,6 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
 
-   
         self.counter = 0;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
         [self randomWord];
@@ -264,7 +252,6 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    
 
     [self.timer invalidate];
     

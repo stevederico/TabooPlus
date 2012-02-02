@@ -8,16 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol SDDataManagerDelegate <NSObject>
-
--(void)dataReady;
-
-@end
-
-
-
 @interface SDDataManager : NSObject
-@property (nonatomic, weak) id <SDDataManagerDelegate> delegate;
 
 
 -(void) createRecordsWithPlistNamed:(NSString*)filename;

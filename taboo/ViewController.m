@@ -17,72 +17,7 @@
 
 #pragma mark - View lifecycle
 
-- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    
-    if (self) {
-  
-        // allocate a reachability object
-        Reachability* reach = [Reachability reachabilityWithHostname:@"www.google.com"];
-        
-        // set the blocks 
-        reach.reachableBlock = ^(Reachability*reach)
-        {
-            NSLog(@"REACHABLE!");
-            if (self.dataManager == nil) {
-                self.dataManager = [[SDDataManager alloc] init];
-                self.dataManager.delegate = self;
-                [self.dataManager createRecordsWithParseClass:@"Word"];
-                [self.dataManager resetUsed];
-            }
-            
-            if (missedDownload == YES) {
-                [self.dataManager createRecordsWithParseClass:@"Word"];
-                [self.dataManager resetUsed];
-            }
-          
-        };
-        
-        reach.unreachableBlock = ^(Reachability*reach)
-        {
-               NSLog(@"UNREACHABLE!");
-            if (self.dataManager == nil) {
-                self.dataManager = [[SDDataManager alloc] init];
-                self.dataManager.delegate = self;
-            }
-            if ([self.dataManager isDBEmpty]) {
-             
-                dispatch_async(dispatch_get_main_queue(), ^{
-                
-                
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Network Connection" message:@"Please connect to the internet to download your cards" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                    [alert show];
-                    
-                    missedDownload = YES;
-                
-                
-                });
-                
-                
-               
-            }else{
-                dispatch_async(dispatch_get_main_queue(), ^{
-                self.gameButton.hidden = NO;
-                  });
-            }
-            
-       
-            
-            
-        };
-        
-        // start the notifier which will cause the reachability object to retain itself!
-        [reach startNotifier];
-    }
 
-    return self;
-
-}
 
 
 - (void) viewDidLoad{
@@ -94,15 +29,15 @@
 
     self.title = @"What Word?";
     
+    self.dataManager = [[SDDataManager alloc] init];
+    [self.dataManager createRecordsWithParseClass:@"Word"];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
       [self.dataManager resetUsed];
-    
-
-
 }
 
 - (void)viewDidUnload {
@@ -115,6 +50,15 @@
 
 
 - (IBAction)startedTapped:(id)sender {
+    if ([self.dataManager isDBEmpty]) {
+        if (![self checkForNetwork]) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Cards" message:@"Please connect to the internet to download the game cards" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+            return;
+        }
+    }
+    
+    
     
     [[LocalyticsSession sharedLocalyticsSession] tagEvent:@"New Game"];
     
@@ -165,10 +109,5 @@
     
 }
 
-
-- (void)dataReady{
-    self.gameButton.hidden = NO;
-
-}
 
 @end
