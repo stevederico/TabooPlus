@@ -150,14 +150,27 @@
 }
 
 - (void)roundOver{
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"TimeUp" ofType:@"mp3"];
+    if (path) {
+        NSURL *url = [NSURL fileURLWithPath:path];
+        OSStatus err = AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
+        if (err != kAudioServicesNoError) {
+        NSLog(@"Could not load %@, error code: %ld", url, err);
+        } 
+        
+        AudioServicesPlaySystemSound(sound);
+        
+
+        
+
+    }
+    
+    
+    
 
     NSLog(@"ROUND OVER");
 
-    
-    
-    
-
-    
     if (currentTeam == [NSNumber numberWithInt:1]) {
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
         int balance = [[prefs valueForKey:@"Team1Score"] intValue];
@@ -179,22 +192,36 @@
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     NSNumber *team1 = [prefs objectForKey:@"Team1Score"];
     NSNumber *team2 = [prefs objectForKey:@"Team2Score"];
-    
-    
-    NSString *message = [NSString stringWithFormat:@"Team %@ Got %d",self.currentTeam,score];
-    
-    NSString *current = [NSString stringWithFormat:@"Team 1: %@ Team 2: %@",team1,team2];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message message:current delegate:self cancelButtonTitle:@"Game Over" otherButtonTitles:@"Next Team", nil];
-    [alert setDelegate:self];
-    [alert show];
-    
+
     score = 0;
     
     if (self.currentTeam ==[NSNumber numberWithInt:1]) {
+        
+        
+        NSString *message = [NSString stringWithFormat:@"Team 1: %@",team1];
+        
+        NSString *current = [NSString stringWithFormat:@"Team 2: %@",team2];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message message:current delegate:self cancelButtonTitle:@"Next Team" otherButtonTitles: nil];
+        [alert setDelegate:self];
+        [alert show];
+        
+        
+        
         self.currentTeam = [NSNumber numberWithInt:2];
+    
+        
+        
     }else {
         self.currentTeam = [NSNumber numberWithInt:1];
+        
+        NSString *message = [NSString stringWithFormat:@"Team 2: %@",team2];
+        
+        NSString *current = [NSString stringWithFormat:@"Team 1: %@",team1];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:message message:current delegate:self cancelButtonTitle:@"Next Team" otherButtonTitles: nil];
+        [alert setDelegate:self];
+        [alert show];
         
     }
     
@@ -204,30 +231,26 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
 
-    if (buttonIndex >0) {
+   
         self.counter = 0;
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
         [self randomWord];
-    }else{
-        [self.timer invalidate];
-        [self.navigationController popViewControllerAnimated:YES];
-    
-    }
+   
  
 }
 
 - (void)timerCallback{
     counter++;
     NSLog(@"%f",self.counter);
-    float p = (float)self.counter/30;
+    float p = (float)self.counter/60;
     self.progressBar.progress = p;
-    if (counter == 30) {
+    if (counter == 60) {
         [self roundOver];
         [self.timer invalidate];
          self.progressBar.progressTintColor = [UIColor colorWithRed:54.0/255.0 green:64.0/255.0 blue:78.0/255.0 alpha:1.0];
     }
     
-    if (counter == 25) {
+    if (counter == 55) {
         self.progressBar.progressTintColor = [UIColor redColor];
     }
 

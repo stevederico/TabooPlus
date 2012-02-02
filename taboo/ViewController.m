@@ -17,11 +17,7 @@
     [super viewDidAppear:animated];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    self.title = @"What Word?";
-    
-    SDDataManager *pdm = [[SDDataManager alloc] init];
-    [pdm createRecordsWithParseClass:@"Word"];
-    [pdm resetUsed];
+
 
     
     
@@ -34,6 +30,11 @@
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"End Game" style:UIBarButtonItemStyleBordered target:nil action:nil];
     self.navigationItem.backBarButtonItem = backButton;
 
+    self.title = @"What Word?";
+    
+    SDDataManager *pdm = [[SDDataManager alloc] init];
+    [pdm createRecordsWithParseClass:@"Word"];
+    [pdm resetUsed];
 
 
 }

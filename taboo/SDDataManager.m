@@ -22,24 +22,22 @@
 
 -(void) createRecordsWithPlistNamed:(NSString*)filename{
     
-//    NSString *file = [[NSBundle mainBundle] pathForResource:filename ofType:@"plist"];
-//    NSArray *contentArray = [NSArray arrayWithContentsOfFile:file];
-//    NSLog(@"%@",[contentArray  description]);
-//    
-//    for (NSDictionary *item in contentArray) {
-//        
-//        Word *word = [[Word alloc] initWithEntity: [Word entityWithContext:[SSManagedObject mainContext]] insertIntoManagedObjectContext:[SSManagedObject mainContext]];
-//        
-//        word.name = [item objectForKey:@"Word"];
-//        word.adj1 = [item objectForKey:@"Adjective 1"];
-//        word.adj2 = [item objectForKey:@"Adjective 2"];
-//        word.adj3 = [item objectForKey:@"Adjective 3"];
-//        
-//           NSLog(@"Added %@",[word description]);
-//    }
-//    
-//
-//    [[SSManagedObject mainContext] save:nil];
+    NSString *file = [[NSBundle mainBundle] pathForResource:filename ofType:@"plist"];
+    NSArray *contentArray = [NSArray arrayWithContentsOfFile:file];
+    NSLog(@"%@",[contentArray  description]);
+    
+    for (NSDictionary *item in contentArray) {
+        
+        Word *word = [[Word alloc] initWithEntity: [Word entityWithContext:[SSManagedObject mainContext]] insertIntoManagedObjectContext:[SSManagedObject mainContext]];
+        
+        word.name = [item objectForKey:@"Word"];
+        word.adjectives = [item objectForKey:@"Adjectives"];
+        
+           NSLog(@"Added %@",[word description]);
+    }
+    
+
+    [[SSManagedObject mainContext] save:nil];
 
 }
 
@@ -60,6 +58,7 @@
                     Word *word = [[Word alloc] initWithEntity: [Word entityWithContext:context] insertIntoManagedObjectContext:context];
                     word.name = [item objectForKey:@"Name"];
                     word.used = [NSNumber numberWithBool:NO];
+                    word.objectId = [item objectId];
                     word.adjectives = [item objectForKey:@"Adjectives"];
                     
                 }else{
@@ -70,6 +69,7 @@
                         
                         word.used = [NSNumber numberWithBool:NO];
                         word.name = [item objectForKey:@"Name"];
+                        word.objectId = [item objectId];
                         word.adjectives = [item objectForKey:@"Adjectives"];
                     };
                 
@@ -93,15 +93,18 @@
     NSLog(@"Checking for %@",[object objectForKey:@"Name"]);
 
     NSFetchRequest *fetch = [NSFetchRequest fetchRequestWithEntityName:@"Word"];
-    NSString *name = [object objectForKey:@"Name"];
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"name == %@",name];
+    NSString *objectId = [object objectId];
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"objectId == %@",objectId];
     [fetch setPredicate:pred];
     [fetch setReturnsDistinctResults:YES];
-//    [fetch setFetchLimit:1];
+
     
     NSArray *array = [[SSManagedObject mainContext] executeFetchRequest:fetch error:nil];
     if ([array count]>0) {
           NSLog(@"Already There");
+            //Check if newer
+
+        
         return NO;
     }else{
         NSLog(@"Writing");
