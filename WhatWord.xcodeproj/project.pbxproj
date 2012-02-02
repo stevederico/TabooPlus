@@ -18,6 +18,12 @@
 		7B0845DD14D370570039C8F9 /* SDDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0845DC14D370570039C8F9 /* SDDataManager.m */; };
 		7B5D8C3514DA577800646017 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5D8C3414DA577800646017 /* Word.m */; };
 		7B5D8C3714DA6F6B00646017 /* TimeUp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B5D8C3614DA6F6B00646017 /* TimeUp.mp3 */; };
+		7B5D8C4014DA77A700646017 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5D8C3F14DA77A700646017 /* Reachability.m */; };
+		7B5D8C4914DA85BA00646017 /* LocalyticsDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5D8C4314DA85BA00646017 /* LocalyticsDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7B5D8C4A14DA85BA00646017 /* LocalyticsSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5D8C4514DA85BA00646017 /* LocalyticsSession.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7B5D8C4B14DA85BA00646017 /* UploaderThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5D8C4714DA85BA00646017 /* UploaderThread.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7B5D8C5914DA86EF00646017 /* Crittercism_v2_9_37.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5D8C4E14DA86EF00646017 /* Crittercism_v2_9_37.a */; };
+		7B5D8C5B14DA88A300646017 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5D8C5A14DA88A300646017 /* libsqlite3.0.dylib */; };
 		7B61FDEB14D37F7300FBF43D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B61FDEA14D37F7300FBF43D /* Parse.framework */; };
 		7B61FDEE14D37F8600FBF43D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B61FDED14D37F8600FBF43D /* AudioToolbox.framework */; };
 		7B61FDF014D37F8D00FBF43D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B61FDEF14D37F8D00FBF43D /* CFNetwork.framework */; };
@@ -68,6 +74,28 @@
 		7B5D8C3314DA577800646017 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
 		7B5D8C3414DA577800646017 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		7B5D8C3614DA6F6B00646017 /* TimeUp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TimeUp.mp3; sourceTree = "<group>"; };
+		7B5D8C3E14DA77A700646017 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7B5D8C3F14DA77A700646017 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		7B5D8C4214DA85BA00646017 /* LocalyticsDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsDatabase.h; sourceTree = "<group>"; };
+		7B5D8C4314DA85BA00646017 /* LocalyticsDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsDatabase.m; sourceTree = "<group>"; };
+		7B5D8C4414DA85BA00646017 /* LocalyticsSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalyticsSession.h; sourceTree = "<group>"; };
+		7B5D8C4514DA85BA00646017 /* LocalyticsSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalyticsSession.m; sourceTree = "<group>"; };
+		7B5D8C4614DA85BA00646017 /* UploaderThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploaderThread.h; sourceTree = "<group>"; };
+		7B5D8C4714DA85BA00646017 /* UploaderThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploaderThread.m; sourceTree = "<group>"; };
+		7B5D8C4814DA85BA00646017 /* WebserviceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebserviceConstants.h; sourceTree = "<group>"; };
+		7B5D8C4D14DA86EF00646017 /* Crittercism.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crittercism.h; sourceTree = "<group>"; };
+		7B5D8C4E14DA86EF00646017 /* Crittercism_v2_9_37.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = Crittercism_v2_9_37.a; sourceTree = "<group>"; };
+		7B5D8C4F14DA86EF00646017 /* CrittercismAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismAboutViewController.h; sourceTree = "<group>"; };
+		7B5D8C5014DA86EF00646017 /* CrittercismAddCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismAddCommentViewController.h; sourceTree = "<group>"; };
+		7B5D8C5114DA86EF00646017 /* CrittercismAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismAddViewController.h; sourceTree = "<group>"; };
+		7B5D8C5214DA86EF00646017 /* CrittercismDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismDescriptionViewController.h; sourceTree = "<group>"; };
+		7B5D8C5314DA86EF00646017 /* CrittercismJSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismJSONKit.h; sourceTree = "<group>"; };
+		7B5D8C5414DA86EF00646017 /* CrittercismNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismNavigationView.h; sourceTree = "<group>"; };
+		7B5D8C5514DA86EF00646017 /* CrittercismReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismReachability.h; sourceTree = "<group>"; };
+		7B5D8C5614DA86EF00646017 /* CrittercismRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismRootViewController.h; sourceTree = "<group>"; };
+		7B5D8C5714DA86EF00646017 /* CrittercismUIAlertPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismUIAlertPrompt.h; sourceTree = "<group>"; };
+		7B5D8C5814DA86EF00646017 /* CrittercismViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismViewController.h; sourceTree = "<group>"; };
+		7B5D8C5A14DA88A300646017 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		7B61FDEA14D37F7300FBF43D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7B61FDED14D37F8600FBF43D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7B61FDEF14D37F8D00FBF43D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -108,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B5D8C5B14DA88A300646017 /* libsqlite3.0.dylib in Frameworks */,
 				7B61FDEE14D37F8600FBF43D /* AudioToolbox.framework in Frameworks */,
 				7B61FDFA14D37FC100FBF43D /* QuartzCore.framework in Frameworks */,
 				7B61FDF814D37FBB00FBF43D /* Security.framework in Frameworks */,
@@ -120,6 +149,7 @@
 				7BB2CBC014D25633007989DD /* UIKit.framework in Frameworks */,
 				7BB2CBC214D25633007989DD /* Foundation.framework in Frameworks */,
 				7B61FDEB14D37F7300FBF43D /* Parse.framework in Frameworks */,
+				7B5D8C5914DA86EF00646017 /* Crittercism_v2_9_37.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +208,42 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		7B5D8C4114DA85BA00646017 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				7B5D8C5A14DA88A300646017 /* libsqlite3.0.dylib */,
+				7B5D8C4214DA85BA00646017 /* LocalyticsDatabase.h */,
+				7B5D8C4314DA85BA00646017 /* LocalyticsDatabase.m */,
+				7B5D8C4414DA85BA00646017 /* LocalyticsSession.h */,
+				7B5D8C4514DA85BA00646017 /* LocalyticsSession.m */,
+				7B5D8C4614DA85BA00646017 /* UploaderThread.h */,
+				7B5D8C4714DA85BA00646017 /* UploaderThread.m */,
+				7B5D8C4814DA85BA00646017 /* WebserviceConstants.h */,
+			);
+			name = Local;
+			path = src;
+			sourceTree = "<group>";
+		};
+		7B5D8C4C14DA86EF00646017 /* Crit */ = {
+			isa = PBXGroup;
+			children = (
+				7B5D8C4D14DA86EF00646017 /* Crittercism.h */,
+				7B5D8C4E14DA86EF00646017 /* Crittercism_v2_9_37.a */,
+				7B5D8C4F14DA86EF00646017 /* CrittercismAboutViewController.h */,
+				7B5D8C5014DA86EF00646017 /* CrittercismAddCommentViewController.h */,
+				7B5D8C5114DA86EF00646017 /* CrittercismAddViewController.h */,
+				7B5D8C5214DA86EF00646017 /* CrittercismDescriptionViewController.h */,
+				7B5D8C5314DA86EF00646017 /* CrittercismJSONKit.h */,
+				7B5D8C5414DA86EF00646017 /* CrittercismNavigationView.h */,
+				7B5D8C5514DA86EF00646017 /* CrittercismReachability.h */,
+				7B5D8C5614DA86EF00646017 /* CrittercismRootViewController.h */,
+				7B5D8C5714DA86EF00646017 /* CrittercismUIAlertPrompt.h */,
+				7B5D8C5814DA86EF00646017 /* CrittercismViewController.h */,
+			);
+			name = Crit;
+			path = "CrittercismSDK-crashreporting-only";
+			sourceTree = "<group>";
+		};
 		7BB2CBB014D25633007989DD = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +299,10 @@
 		7BB2CBC614D25633007989DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7B5D8C4C14DA86EF00646017 /* Crit */,
+				7B5D8C4114DA85BA00646017 /* Local */,
+				7B5D8C3E14DA77A700646017 /* Reachability.h */,
+				7B5D8C3F14DA77A700646017 /* Reachability.m */,
 				7B5D8C3614DA6F6B00646017 /* TimeUp.mp3 */,
 				7B780E4E14D9B3E200C96D31 /* Default.png */,
 				7B780E4B14D9B3C100C96D31 /* Default@2x.png */,
@@ -337,6 +407,10 @@
 				7B0845D414D36F7C0039C8F9 /* Model.xcdatamodeld in Sources */,
 				7B0845DD14D370570039C8F9 /* SDDataManager.m in Sources */,
 				7B5D8C3514DA577800646017 /* Word.m in Sources */,
+				7B5D8C4014DA77A700646017 /* Reachability.m in Sources */,
+				7B5D8C4914DA85BA00646017 /* LocalyticsDatabase.m in Sources */,
+				7B5D8C4A14DA85BA00646017 /* LocalyticsSession.m in Sources */,
+				7B5D8C4B14DA85BA00646017 /* UploaderThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +492,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "taboo/WhatWord-Prefix.pch";
 				INFOPLIST_FILE = "taboo/WhatWord-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/taboo/CrittercismSDK-crashreporting-only\"",
+				);
 				PRODUCT_NAME = WhatWord;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1EF25480-55A2-4A21-AD87-93D10433A5B2";
 				WRAPPER_EXTENSION = app;
@@ -435,6 +513,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "taboo/WhatWord-Prefix.pch";
 				INFOPLIST_FILE = "taboo/WhatWord-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/taboo/CrittercismSDK-crashreporting-only\"",
+				);
 				PRODUCT_NAME = WhatWord;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AA06A27E-4983-4625-873F-B02E41063528";
 				WRAPPER_EXTENSION = app;

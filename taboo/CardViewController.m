@@ -5,7 +5,7 @@
 //  Created by Stephen Derico on 1/26/12.
 //  Copyright (c) 2012 Bixby Apps. All rights reserved.
 //
-
+#import "LocalyticsSession.h"
 #import "CardViewController.h"
 
 @implementation CardViewController
@@ -132,6 +132,12 @@
 }
 
 - (IBAction)nextTapped:(id)sender {
+    
+    NSDictionary *dictionary =
+    [NSDictionary dictionaryWithObjectsAndKeys:
+    self.word.name, @"Word", nil];
+    [[LocalyticsSession sharedLocalyticsSession] tagEvent:@"Guessed Correct" attributes:dictionary];
+    
     
     self.score++;
     self.word.used = [NSNumber numberWithBool:YES];
