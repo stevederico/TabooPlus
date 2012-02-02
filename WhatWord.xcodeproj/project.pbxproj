@@ -33,7 +33,6 @@
 		7B61FDF814D37FBB00FBF43D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B61FDF714D37FBB00FBF43D /* Security.framework */; };
 		7B61FDFA14D37FC100FBF43D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B61FDF914D37FC100FBF43D /* QuartzCore.framework */; };
 		7B780E4C14D9B3C100C96D31 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B780E4B14D9B3C100C96D31 /* Default@2x.png */; };
-		7B780E4F14D9B3E200C96D31 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B780E4E14D9B3E200C96D31 /* Default.png */; };
 		7BB2CBC014D25633007989DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2CBBF14D25633007989DD /* UIKit.framework */; };
 		7BB2CBC214D25633007989DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2CBC114D25633007989DD /* Foundation.framework */; };
 		7BB2CBC414D25633007989DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB2CBC314D25633007989DD /* CoreGraphics.framework */; };
@@ -383,7 +382,6 @@
 				7BB46C0414D938CF000D6635 /* WhatWord@2x.png in Resources */,
 				7BB46C0614D93B49000D6635 /* gray.png in Resources */,
 				7B780E4C14D9B3C100C96D31 /* Default@2x.png in Resources */,
-				7B780E4F14D9B3E200C96D31 /* Default.png in Resources */,
 				7B5D8C3714DA6F6B00646017 /* TimeUp.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
