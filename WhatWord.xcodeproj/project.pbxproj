@@ -24,6 +24,7 @@
 		7B5D8C4B14DA85BA00646017 /* UploaderThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5D8C4714DA85BA00646017 /* UploaderThread.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7B5D8C5914DA86EF00646017 /* Crittercism_v2_9_37.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5D8C4E14DA86EF00646017 /* Crittercism_v2_9_37.a */; };
 		7B5D8C5B14DA88A300646017 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B5D8C5A14DA88A300646017 /* libsqlite3.0.dylib */; };
+		7B5D8C5D14DB445700646017 /* TimeUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7B5D8C5C14DB445700646017 /* TimeUp.wav */; };
 		7B61FDEB14D37F7300FBF43D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B61FDEA14D37F7300FBF43D /* Parse.framework */; };
 		7B61FDEE14D37F8600FBF43D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B61FDED14D37F8600FBF43D /* AudioToolbox.framework */; };
 		7B61FDF014D37F8D00FBF43D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B61FDEF14D37F8D00FBF43D /* CFNetwork.framework */; };
@@ -95,6 +96,7 @@
 		7B5D8C5714DA86EF00646017 /* CrittercismUIAlertPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismUIAlertPrompt.h; sourceTree = "<group>"; };
 		7B5D8C5814DA86EF00646017 /* CrittercismViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrittercismViewController.h; sourceTree = "<group>"; };
 		7B5D8C5A14DA88A300646017 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		7B5D8C5C14DB445700646017 /* TimeUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TimeUp.wav; sourceTree = "<group>"; };
 		7B61FDEA14D37F7300FBF43D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7B61FDED14D37F8600FBF43D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7B61FDEF14D37F8D00FBF43D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -298,6 +300,7 @@
 		7BB2CBC614D25633007989DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7B5D8C5C14DB445700646017 /* TimeUp.wav */,
 				7B5D8C4C14DA86EF00646017 /* Crit */,
 				7B5D8C4114DA85BA00646017 /* Local */,
 				7B5D8C3E14DA77A700646017 /* Reachability.h */,
@@ -383,6 +386,7 @@
 				7BB46C0614D93B49000D6635 /* gray.png in Resources */,
 				7B780E4C14D9B3C100C96D31 /* Default@2x.png in Resources */,
 				7B5D8C3714DA6F6B00646017 /* TimeUp.mp3 in Resources */,
+				7B5D8C5D14DB445700646017 /* TimeUp.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
