@@ -41,13 +41,20 @@
     self.progressBar.progressTintColor = [UIColor colorWithRed:54.0/255.0 green:64.0/255.0 blue:78.0/255.0 alpha:1.0];
  
     [self randomWord];
-     self.counter = 0;
+    self.counter = 0;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerCallback) userInfo:nil repeats:YES];
     
     UIBarButtonItem *skipButton = [[UIBarButtonItem alloc] initWithTitle:@"Skip" style:UIBarButtonItemStylePlain target:self action:@selector(skip)];
     self.navigationItem.rightBarButtonItem = skipButton;
     
     
+}
+
+- (void)setupDisplay{
+
+
+
+
 }
 
 - (void)viewDidUnload
@@ -130,6 +137,8 @@
 
 - (IBAction)nextTapped:(id)sender {
     
+
+    
     NSDictionary *dictionary =
     [NSDictionary dictionaryWithObjectsAndKeys:
     self.word.name, @"Word", nil];
@@ -154,7 +163,7 @@
 
 
 - (void)playSound{
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"TimeUp" ofType:@"mp3"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"TimeUp" ofType:@"wav"];
     if (path) {
         NSURL *url = [NSURL fileURLWithPath:path];
         OSStatus err = AudioServicesCreateSystemSoundID((__bridge CFURLRef)url, &sound);
@@ -170,6 +179,8 @@
 - (void)roundOver{
     
     NSLog(@"ROUND OVER");
+    
+    [self playSound];
 
     if (currentTeam == [NSNumber numberWithInt:1]) {
         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
